@@ -1,0 +1,130 @@
+html,
+body {
+    background-color: #000000;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    margin: 0;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: blue;
+    padding: 15px;
+}
+
+.logo a{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 32px;
+    color: goldenrod;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+}
+
+nav li{
+    list-style: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+nav a:link, 
+nav a:visited {
+    text-decoration: none;
+    color: orangered;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: black;
+}
+
+h3 a{
+    color: brown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style:italic;
+}
+
+main {
+    background-color: gray;
+    height: 100%;
+}
+
+.hero {
+    background-image: url('../images/foodlife_2.0.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.75);
+    z-index: -1000;
+}
+
+.favorites {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 80px;
+}
+
+.card {
+    background-color: white;
+    color:#000000;
+    width: 400px;
+    
+}
+
+.card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-size: 400px;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+}
+
+.card:first-child::before {
+    background-image: url('../images/eggnog-1.webp');
+    width: auto;
+}
+
+.card:nth-child(2)::before {
+    background-image: url('../images/chicken-katsu.webp');
+}
+
+.card:last-child::before {
+    background-image: url('../images/chinese-tea-leaf-eggs.webp');
+}
+
+.card-body {
+    padding: 30px;
+}
+
+footer {
+    background-color: darkgray;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
